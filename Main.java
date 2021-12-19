@@ -36,9 +36,10 @@ final class Main {
     * @param workString the users string
     */
     public static String reverse(final String workString) {
-        if (workString.isEmpty()) //Nothing left to reverse end the recursion
+        if (workString.isEmpty()) { //Nothing left to reverse end the recursion
                 return workString;
-        return reverse(workString.substring(1)) + workString.charAt(0); 
+        }
+        return reverse(workString.substring(1)) + workString.charAt(0);
       //Add first character to the end and call the function again to continue
     }
     /**
