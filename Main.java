@@ -1,7 +1,7 @@
 /*
 * The "Template" program is a template
 *
-* @author  Darien R-H
+* @author  Darien R-Hh
 * @version 1.0
 * @since   2021-12-18
 */
