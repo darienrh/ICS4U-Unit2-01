@@ -9,7 +9,7 @@
 import java.util.Scanner;
 
 /**
-* This is a program reverses a string
+* This is a program reverses a string.
 */
 final class Main {
 
@@ -38,19 +38,20 @@ final class Main {
     public static void main(final String[] args) {
        String originalString;
         String reversedString;
-        Scanner myInput=new Scanner(System.in);  //Instantiate Scanner for input
+        Scanner myInput = new Scanner(System.in);  //Instantiate Scanner for input
         System.out.print("Enter a String :  ");
         originalString = myInput.nextLine();  //get string
-        reversedString= reverse(originalString);
+        reversedString = reverse(originalString);
         System.out.println("The original string is " + originalString);
-        System.out.println("The reversed string (using recursion) is: " + reversedString);
+        System.out.println("The reversed string (using recursion) is: "
+        + reversedString);
         System.out.println("Done");
     }
-
     public static String reverse(String workString)
     {
         if (workString.isEmpty()) //Nothing left to reverse end the recursion
                 return workString;
-        return reverse(workString.substring(1)) + workString.charAt(0); //Add first character to the end and call the function again to continue
+        return reverse(workString.substring(1)) + workString.charAt(0); 
+      //Add first character to the end and call the function again to continue
     }
 }
