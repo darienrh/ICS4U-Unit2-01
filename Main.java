@@ -29,7 +29,18 @@ final class Main {
     private Main() {
         throw new IllegalStateException("Cannot be instantiated");
     }
-
+    /**
+    * The starting reverse() function.
+    *
+    * @return the reverse of the string
+    * @param workString the users string
+    */
+    public static String reverse(final String workString) {
+        if (workString.isEmpty()) //Nothing left to reverse end the recursion
+                return workString;
+        return reverse(workString.substring(1)) + workString.charAt(0); 
+      //Add first character to the end and call the function again to continue
+    }
     /**
     * The starting main() function.
     *
@@ -38,7 +49,8 @@ final class Main {
     public static void main(final String[] args) {
        String originalString;
         String reversedString;
-        Scanner myInput = new Scanner(System.in);  //Instantiate Scanner for input
+        Scanner myInput = new Scanner(System.in);
+        //Instantiate Scanner for input
         System.out.print("Enter a String :  ");
         originalString = myInput.nextLine();  //get string
         reversedString = reverse(originalString);
@@ -46,12 +58,5 @@ final class Main {
         System.out.println("The reversed string (using recursion) is: "
         + reversedString);
         System.out.println("Done");
-    }
-    public static String reverse(String workString)
-    {
-        if (workString.isEmpty()) //Nothing left to reverse end the recursion
-                return workString;
-        return reverse(workString.substring(1)) + workString.charAt(0); 
-      //Add first character to the end and call the function again to continue
     }
 }
